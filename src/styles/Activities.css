@@ -1,0 +1,33 @@
+.activities-header {
+    background: url("/static/imgs/b.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;    
+    height: 133px;
+}
+
+.activities-left-arrow {
+    position: absolute;
+    left: 16px;
+}
+
+.activities-add-activity {
+    width: 130px;
+    height: 122px;
+    background: url("/static/imgs/plus-circle.svg");
+    position: relative;
+}
+
+.activities-add-activity-plus {
+    position: absolute;
+    left: 51px;
+    top: 47px;
+}
+
+.activities-add-activity-text {
+    white-space: nowrap;
+    position: absolute;
+    left: -90px;
+    top: 46px;
+    font-size: 1.4rem;
+}

@@ -1,0 +1,28 @@
+.add-activities-header {
+    background: url("/static/imgs/c.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;    
+    height: 200px;
+}
+
+.add-activity-input {
+    background-color: #515BAD;
+    font-size: 14px;
+}
+
+.add-activity-input:focus {
+    outline: none;
+}
+
+.add-activity-screen-container {
+    background-color: #ffffff;
+}
+
+.add-activity-form-container {
+    color: #27307F;
+}
+
+.add-activity-description-input {
+    background-color: #ECECEC;
+}

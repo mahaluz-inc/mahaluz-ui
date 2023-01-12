@@ -1,0 +1,8 @@
+.activity-box-active {
+    background: linear-gradient(92.16deg, #23125F 4.63%, #290B98 97.46%);
+    box-shadow: 1px 0px 24px rgba(255, 255, 255, 0.3);
+}
+
+.activity-box {
+    background: linear-gradient(92.16deg, #23125F 4.63%, #290B98 97.46%);
+}
