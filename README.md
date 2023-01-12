@@ -1,1 +1,1 @@
-# uniq-trip-ui
+# mahaluz-ui
