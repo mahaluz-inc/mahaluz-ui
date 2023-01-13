@@ -25,4 +25,26 @@
 
 .add-activity-description-input {
     background-color: #ECECEC;
+    width: 100%;
+}
+
+.add-activity-type.active {
+    background-color: #3643B5;
+    color: #ffffff;
+}
+
+.add-activity-type.active img {
+    filter: brightness(0) invert(1);
+}
+
+.add-activity-type {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    width: 100px;
+    height: 100px;
+}
+
+.add-activity-type-img {
+    width: 30px;
+    height: 30px;
 }

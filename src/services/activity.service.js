@@ -31,17 +31,17 @@ export async function getActivityTypes() {
     return [
         {
             id: "1",
-            img: "/static",
+            img: "/static/imgs/timer.svg",
             text: "עמידה בזמנים"
         },
         {
             id: "2",
-            img: "",
+            img: "/static/imgs/2people.svg",
             text: "תקשורת תחת לחץ"
         },
         {
             id: "3",
-            img: "",
+            img: "/static/imgs/couch.svg",
             text: "ישיבה ממושכת"
         }
     ];
