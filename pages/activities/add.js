@@ -2,11 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { getActivityTypes } from '../../src/services/activity.service';
 import TimePicker from '../../src/components/TimePicker/TimePicker.component';
-import { Switch, AutoComplete } from 'antd';
+import Map from '../../src/components/Map/Map.component';
+import { Switch, AutoComplete, Input } from 'antd';
 import Link from 'next/link';
 import { useState } from 'react';
 import classnames from 'classnames';
-import { autocompletePlaces } from '../../src/services/places.service';
+import { autocompletePlaces, getPlaceBusyHours } from '../../src/services/places.service';
 import _ from "lodash";
 
 export default function ActivitiesAdd({ activityTypes }) {
@@ -35,6 +36,15 @@ export default function ActivitiesAdd({ activityTypes }) {
 			description,
 			activityType,
 			selectedPlace
+		});
+	};
+
+	const onPlaceSelected = async (value) => {
+		const place = await getPlaceBusyHours(value.value);
+		console.log({ value, place });
+		setSelectedPlace({
+			...place,
+			label: value.label
 		});
 	};
 
@@ -101,11 +111,17 @@ export default function ActivitiesAdd({ activityTypes }) {
 							allowClear
 							className="w-full"
 							options={placesOptions}
-							onSelect={value => setSelectedPlace(value)}
+							onSelect={(id, value) => onPlaceSelected(value)}
 							onSearch={onSearchPlaces}
 							placeholder="חפש מקום..."
-							value={selectedPlace}
+							value={selectedPlace?.label}
 						/>
+						{selectedPlace && (
+							<Map
+								lat={selectedPlace.coordinates.lat}
+								lng={selectedPlace.coordinates.lng}
+							/>
+						)}
 					</div>
 				)}
 			</div>
